@@ -287,161 +287,161 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_C));
             };
-            break;
+            return true;
         case CS_1_KC_16:
             if (record->event.pressed) {
                 tap_code16(LSFT(LCTL(KC_E)));
             }; // show explorer
-            break;
+            return true;
         case CS_2_KC_16:
             if (record->event.pressed) {
                 SEND_STRING("git add .");
             };
-            break;
+            return true;
         case CS_0_KC_15:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_X));
             };
-            break;
+            return true;
         case CS_1_KC_15:
             if (record->event.pressed) {
                 tap_code16(LSFT(LCTL(KC_D)));
             }; // show debug
-            break;
+            return true;
         case CS_2_KC_15:
             if (record->event.pressed) {
                 SEND_STRING("git commit -m ''");
                 tap_code(KC_LEFT);
             };
-            break;
+            return true;
         case CS_0_KC_14:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_V));
             };
-            break;
+            return true;
         case CS_1_KC_14:
             if (record->event.pressed) {
                 tap_code16(LSFT(LCTL(KC_G)));
             }; // show source
-            break;
+            return true;
         case CS_2_KC_14:
             if (record->event.pressed) {
                 SEND_STRING("git push");
             };
-            break;
+            return true;
         case CS_0_KC_13:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_C));
             };
-            break;
+            return true;
         case CS_1_KC_13:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_B));
             }; // toggle sidebar
-            break;
+            return true;
         case CS_2_KC_13:
             if (record->event.pressed) {
                 SEND_STRING("git pull");
             };
-            break;
+            return true;
         // second row
         case CS_0_KC_12:
             if (record->event.pressed) {
                 tap_code16(LCTL(LSFT(KC_V)));
             };
-            break;
+            return true;
         case CS_1_KC_12:
             if (record->event.pressed) {
                 tap_code(KC_F5);
             }; // debug start/continue
-            break;
+            return true;
         case CS_2_KC_12:
             if (record->event.pressed) {
                 SEND_STRING("git show \n");
             };
-            break;
+            return true;
         case CS_0_KC_11:
             if (record->event.pressed) {
                 tap_code16(LCTL(LSFT(KC_V)));
             };
-            break;
+            return true;
         case CS_1_KC_11:
             if (record->event.pressed) {
                 tap_code(KC_F10);
             }; // step over
-            break;
+            return true;
         case CS_2_KC_11:
             if (record->event.pressed) {
                 SEND_STRING("git checkout ");
             };
-            break;
+            return true;
         case CS_0_KC_10:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_Z));
             };
-            break;
+            return true;
         case CS_1_KC_10:
             if (record->event.pressed) {
                 tap_code(KC_F11);
             }; // step out
-            break;
+            return true;
         case CS_2_KC_10:
             if (record->event.pressed) {
                 SEND_STRING("git checkout -b ''");
                 tap_code(KC_LEFT);
             };
-            break;
+            return true;
         case CS_0_KC_9:
             if (record->event.pressed) {
                 tap_code16(LCTL(LSFT(KC_Z)));
             };
-            break;
+            return true;
         case CS_1_KC_9:
             if (record->event.pressed) {
                 tap_code16(LSFT(KC_F11));
             }; // step in
-            break;
+            return true;
         case CS_2_KC_9:
             if (record->event.pressed) {
                 SEND_STRING("git fetch \n");
             };
-            break;
+            return true;
         // third row
         case CS_0_KC_8:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_PGUP));
             };
-            break;
+            return true;
         case CS_1_KC_8:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_Z));
             };
-            break;
+            return true;
         case CS_0_KC_7:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_PGDN));
             };
-            break;
+            return true;
         case CS_1_KC_7:
             if (record->event.pressed) {
                 tap_code16(LCTL(LSFT(KC_Z)));
             };
-            break;
+            return true;
         case CS_0_KC_6:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_T));
             };
-            break;
+            return true;
         case CS_1_KC_6:
             if (record->event.pressed) {
                 tap_code16(LCTL(LSFT(KC_K)));
             }; // del line
-            break;
+            return true;
         case CS_0_KC_5:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_W));
             };
-            break;
+            return true;
         case CS_1_KC_5:
             if (record->event.pressed) {
                 if (os == (char *)"LINUX") {
@@ -450,60 +450,60 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     tap_code16(LSFT(LALT(KC_F)));
                 }
             }; // format
-            break;
+            return true;
         // fourth row
         case CS_0_KC_4:
             if (record->event.pressed) {
                 tap_code16(LCTL(LSFT(KC_J)));
             }; // dev tools
-            break;
+            return true;
         case CS_1_KC_4:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_C));
             };
-            break;
+            return true;
         case CS_0_KC_3:
             if (record->event.pressed) {
                 tap_code16(LCTL(LSFT(KC_M)));
             }; // new login
-            break;
+            return true;
         case CS_1_KC_3:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_X));
             };
-            break;
+            return true;
         case CS_0_KC_2:
             if (record->event.pressed) {
                 tap_code(KC_F7);
             }; // caret
-            break;
+            return true;
         case CS_1_KC_2:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_V));
             };
-            break;
+            return true;
         case CS_3_KC_2:
             if (record->event.pressed) {
                 jiggler = !jiggler;
             };
-            break;
+            return true;
         case CS_0_KC_1:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_L));
             }; // downloads
-            break;
+            return true;
         case CS_1_KC_1:
             if (record->event.pressed) {
                 tap_code16(LCTL(KC_SLSH));
             };
-            break;
+            return true;
         case CS_3_KC_1:
             if (record->event.pressed) {
                 audio_toggle();
             };
-            break;
+            return true;
         default:
-            break;
+            return true;
     }
     return true;
 }
