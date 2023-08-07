@@ -104,8 +104,8 @@ void drawLayerMap(void) {
             oled_set_cursor(0, 4);
             oled_write_P(PSTR("PrT | "), false);
             oled_write_P(PSTR("NxT | "), false);
-            oled_write_P(PSTR("NwT | "), false);
-            oled_write_P(PSTR("ClT"), false);
+            oled_write_P(PSTR("ClT | "), false);
+            oled_write_P(PSTR("NwT"), false);
             oled_set_cursor(0, 5);
             oled_write_P(PSTR("Dev | "), false);
             oled_write_P(PSTR("Nlg | "), false);
@@ -326,8 +326,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true;
         case CS_1_KC_15:
             if (record->event.pressed) {
-                tap_code16(LSFT(LCTL(KC_D)));
-            }; // show debug
+                tap_code16(LCTL(KC_GRAVE));
+            };
             return true;
         case CS_2_KC_15:
             if (record->event.pressed) {
@@ -343,6 +343,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case CS_1_KC_14:
             if (record->event.pressed) {
                 tap_code16(LSFT(LCTL(KC_G)));
+                tap_code16(KC_G);
             }; // show source
             return true;
         case CS_2_KC_14:
@@ -450,7 +451,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true;
         case CS_0_KC_6:
             if (record->event.pressed) {
-                tap_code16(LCTL(KC_T));
+                tap_code16(LCTL(KC_W));
             };
             return true;
         case CS_1_KC_6:
@@ -460,7 +461,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true;
         case CS_0_KC_5:
             if (record->event.pressed) {
-                tap_code16(LCTL(KC_W));
+                tap_code16(LCTL(KC_T));
             };
             return true;
         case CS_1_KC_5:
